@@ -1,0 +1,297 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Μετά - δεδομένα -->
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Τίτλος -->
+    <title>Ταξιδιωτικός οδηγός στην Κεφαλλονιά</title>
+
+    <!-- Εικονίδιο -->
+    <link rel="icon" href="{% static 'tourismingreece/img/logos.png' %}">
+
+    <!-- Φόρτωση του bootstrap -->
+    <link rel="stylesheet" href="{% static 'tourismingreece/css/style.css' %}">
+
+</head>
+
+<body>
+    <!-- Εισαγωγή Navbar -->
+    <header class="header-area">
+        <!-- Περιοχή Navbar -->
+        <div class="palatin-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Μενού -->
+                    <nav class="classy-navbar justify-content-between" id="palatinNav">
+
+                        <!-- Logo -->
+                        <a href="index.html" class="nav-brand"><img src="{% static 'tourismingreece/img/logos.png' %}" alt=""></a>
+
+                        <!-- Κώδικας για να είναι συμβατός για κινητά και ελαχιστοποίηση οθόνης -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Mενού -->
+                        <div class="classy-menu">
+
+                            <!-- Ενεργοποίηση κουμπιού για πλοήγηση προς τα πάνω -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Σελίδες -->
+                            <div class="classynav">
+                                <ul>
+                                    <li class="active"><a href=''>Αρχική</a></li>
+                                    <li><a href="about-us.html">Προορισμοί</a></li>
+                                    <li><a href="about-us.html">Κρατήσεις</a></li>
+                                    <li><a href="services.html">Διαθεσιμότητα</a></li>
+                                    <li><a href="services.html">Ημερολόγιο</a></li>
+                                    <li><a href="services.html">Καιρός</a></li>
+                                </ul>
+
+                                <!-- Button -->
+                                <div class="menu-btn">
+                                    <a href="#" class="btn palatin-btn">Εγγραφή</a>
+                                </div>
+                            </div>
+                            <!-- Τέλος Navbar -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Κεντρικές φωτογραφίες slide -->
+    <section class="hero-area">
+        <div class="hero-slides owl-carousel">
+
+            <!-- 1o slide -->
+            <div class="single-hero-slide d-flex align-items-center justify-content-center">
+
+                <div class="slide-img bg-img" style="background-image: url({% static 'tourismingreece/img/../../../static/tourismingreece/img/image_1.jpg' %});"></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-9">
+                            <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
+                                <div class="line" data-animation="fadeInUp" data-delay="300ms"></div>
+                                <h2 data-animation="fadeInUp" data-delay="500ms">Θαλάσσιος Παράδεισος</h2>
+                                <p data-animation="fadeInUp" data-delay="700ms">Τα κρυστάλλινα νερά της Κεφαλλονιάς σε κάνουν να νιώθεις σαν να περπατάς πάνω σε ένα όνειρο.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2o slide -->
+            <div class="single-hero-slide d-flex align-items-center justify-content-center">
+                <div class="slide-img bg-img" style="background-image: url({% static 'tourismingreece/img/image_2.jpg' %});"></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-9">
+                            <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
+                                <div class="line" data-animation="fadeInUp" data-delay="300ms"></div>
+                                <h2 data-animation="fadeInUp" data-delay="500ms">Μεγαλοπρεπές Φρούριο</h2>
+                                <p data-animation="fadeInUp" data-delay="700ms">Το μονοπάτι είναι ένα μυστηριώδες ταξίδι που σε οδηγεί σε ένα παραμυθένιο φρούριο.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3o slide -->
+            <div class="single-hero-slide d-flex align-items-center justify-content-center">
+                <div class="slide-img bg-img" style="background-image: url({% static 'tourismingreece/img/image_3.jpg' %});"></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-9">
+                            <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
+                                <div class="line" data-animation="fadeInUp" data-delay="300ms"></div>
+                                <h2 data-animation="fadeInUp" data-delay="500ms">Μυστηριώδες Σπήλαια</h2>
+                                <p data-animation="fadeInUp" data-delay="700ms">Τα σπήλαια της Κεφαλλονιάς, κρυμμένοι θησαυροί που περιμένουν να ανακαλυφθούν.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Διαφήμιση ιστοσελίδας -->
+    <section class="about-us-area">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-12 col-lg-6">
+                    <div class="about-text text-center mb-100">
+                        <div class="section-heading text-center">
+                            <div class="line-"></div>
+                            <h2>Ένα ταξίδι στην Κεφαλλονιά: Είσαι έτοιμος να την ανακαλύψεις;</h2>
+                        </div>
+                        <div class="about-key-text">
+                            <h6><span class="fa fa-check"></span> Απόκρημνοι βράχοι και γαλαζοπράσινα νερά συνθέτουν ένα μοναδικό τοπίο.</h6>
+                            <h6><span class="fa fa-check"></span> Ηλιοβασιλέματα που σε αφήνουν άφωνο, μια εμπειρία που δεν πρέπει να χάσεις.</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <div class="about-thumbnail homepage mb-100">
+                        <!-- Πρώτη Εικόνα -->
+                        <div class="first-img wow fadeInUp" data-wow-delay="100ms">
+                            <img src="{% static 'tourismingreece/img/../../../static/tourismingreece/img/image_5.jpg' %}" alt="">
+                        </div>
+                        <!-- Δεύτερη Εικόνα -->
+                        <div class="second-img wow fadeInUp" data-wow-delay="300ms">
+                            <img src="{% static 'tourismingreece/img/../../../static/tourismingreece/img/image_4.jpg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   <!-- Τιμές Δωματίων -->
+    <section class="pool-area section-padding-100 bg-img bg-fixed" style="background-image: url({% static 'tourismingreece/img/../../../static/tourismingreece/img/image_6.jpg' %});">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-6">
+                    <div class="section-heading text-center">
+                        <div class="line-"></div>
+                        <h2>Κλείστε το δωμάτιο της αρεσκείας σας</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+
+                <!-- Διαθεσιμότητα δωματίων -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-rooms-area wow fadeInUp" data-wow-delay="300ms">
+                        <!-- Εικόνα -->
+                        <div class="bg-thumbnail bg-img" style="background-image: url({% static 'tourismingreece/img/image_7.jpg'%}); "></div>
+                        <!-- Τιμή -->
+                        <p class="price-from">150€/H Βραδιά</p>
+                        <!-- Κείμενο Σουίτας -->
+                        <div class="rooms-text">
+                            <div class="line"></div>
+                            <h4>Διπλή Σουίτα</h4>
+                            <p>Μια διπλή σουίτα είναι κάτι περισσότερο από ένα απλό δωμάτιο. Είναι ένας ιδιωτικός κόσμος, ένας καταφύγιο πολυτέλειας και χαλάρωσης. Αποτελείται συνήθως από έναν ευρύχωρο χώρο υποδοχής, ένα ξεχωριστό υπνοδωμάτιο, ένα πολυτελές μπάνιο και συχνά ένα μπαλκόνι ή μια βεράντα με θέα..</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-rooms-area wow fadeInUp" data-wow-delay="500ms">
+                        <!-- Εικόνα -->
+                        <div class="bg-thumbnail bg-img" style="background-image: url({% static 'tourismingreece/img/image_8.jpg' %});"></div>
+                        <!-- Τιμή -->
+                        <p class="price-from">100€/Η Βραδιά</p>
+                        <!-- Κείμενο Μονόκλινου -->
+                        <div class="rooms-text">
+                            <div class="line"></div>
+                            <h4>Μονόκλινο Δωμάτιο</h4>
+                            <p>Ένα μονόκλινο δωμάτιο είναι ο προσωπικός σου παράδεισος, ένα καταφύγιο όπου μπορείς να χαλαρώσεις και να απολαύσεις την ηρεμία.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+   <!-- Επικοινωνία -->
+    <section class="contact-area d-flex flex-wrap align-items-center">
+        <div class="home-map-area">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d401516.18937572616!2d20.235445923083134!3d38.167045382899815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135ded445e3b1f8b%3A0x300bd2ce2b9c4a0!2zzprOtc-GzrHOu86_zr3Ouc6s!5e0!3m2!1sel!2sgr!4v1737565477278!5m2!1sel!2sgr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="contact-info">
+            <div class="section-heading wow fadeInUp" data-wow-delay="100ms">
+                <div class="line-"></div>
+                <h2>Επικοινωνία</h2>
+                <p>Είμαστε εδώ για να σας βοηθήσουμε να πραγματοποιήσετε τα ταξιδιωτικά σας όνειρα. Είτε ψάχνετε για μια χαλαρωτική απόδραση σε μια εξωτική παραλία, μια περιπέτεια σε άγνωστα τοπία, μια ρομαντική βόλτα σε μια κοσμοπολίτικη πόλη ή ένα οικογενειακό ταξίδι γεμάτο διασκέδαση, η ομάδα των έμπειρων ταξιδιωτικών μας συμβούλων είναι εδώ για να σας καθοδηγήσει σε κάθε βήμα..</p>
+            </div>
+            <h4 class="wow fadeInUp" data-wow-delay="300ms">Διεύθυνση: Λεωφόρος Βεργωτή 15</h4>
+            <h5 class="wow fadeInUp" data-wow-delay="400ms">Ταχυδρομικός Κώδικας: 28100</h5>
+            <h5 class="wow fadeInUp" data-wow-delay="500ms">Email Eπικοινωνίας: dimtakos86@gmail.com</h5>
+            <!-- Πληροφορίες Social -->
+            <div class="social-info mt-50 wow fadeInUp" data-wow-delay="600ms">
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+
+                <!-- Footer -->
+                <div class="col-12 col-lg-5">
+
+                </div>
+
+                <!-- Footer -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="footer-widget-area mt-50">
+                        <div class="footer-widget-area mt-50">
+                        <p>Μπορείτε να βρείτε την εταιρεία μας στον χάρτη:</p><br>
+                        <img src="{% static 'tourismingreece/img/footer-map.png' %}" alt="">
+                    </div>
+                        <h6 class="widget-title mb-5"></h6>
+
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="footer-widget-area mt-50">
+
+                    </div>
+                </div>
+
+                <!-- Copywrite -->
+                <div class="col-12">
+                    <div class="copywrite-text mt-30">
+                        <p><a href="#">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <p>Dimitrios Takos</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- All Javascript Scripts -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{% static 'tourismingreece/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'tourismingreece/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'tourismingreece/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'tourismingreece/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'tourismingreece/js/active.js' %}"></script>
+</body>
+
+</html>
