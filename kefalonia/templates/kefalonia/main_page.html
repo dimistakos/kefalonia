@@ -17,7 +17,7 @@
     <link rel="icon" href="{% static 'kefalonia/images/logos.png' %}">
 
     <!-- Φόρτωση του bootstrap -->
-    <link rel="stylesheet" href="{% static 'tourismingreece/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'kefalonia/css/style.css' %}">
 
 </head>
 
@@ -163,7 +163,7 @@
 
 
    <!-- Τιμές Δωματίων -->
-    <section class="pool-area section-padding-100 bg-img bg-fixed" style="background-image: url({% static 'tourismingreece/img/../../../static/tourismingreece/img/image_6.jpg' %});">
+    <section class="pool-area section-padding-100 bg-img bg-fixed" style="background-image: url({% static 'kefalonia/images/image_6.jpg' %});">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-6">
@@ -180,7 +180,7 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single-rooms-area wow fadeInUp" data-wow-delay="300ms">
                         <!-- Εικόνα -->
-                        <div class="bg-thumbnail bg-img" style="background-image: url({% static 'tourismingreece/img/image_7.jpg'%}); "></div>
+                        <div class="bg-thumbnail bg-img" style="background-image: url({% static 'kefalonia/images/image_7.jpg'%}); "></div>
                         <!-- Τιμή -->
                         <p class="price-from">150€/H Βραδιά</p>
                         <!-- Κείμενο Σουίτας -->
@@ -196,7 +196,7 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single-rooms-area wow fadeInUp" data-wow-delay="500ms">
                         <!-- Εικόνα -->
-                        <div class="bg-thumbnail bg-img" style="background-image: url({% static 'tourismingreece/img/image_8.jpg' %});"></div>
+                        <div class="bg-thumbnail bg-img" style="background-image: url({% static 'kefalonia/images/image_8.jpg' %});"></div>
                         <!-- Τιμή -->
                         <p class="price-from">100€/Η Βραδιά</p>
                         <!-- Κείμενο Μονόκλινου -->
@@ -232,40 +232,42 @@
             <h5 class="wow fadeInUp" data-wow-delay="500ms">Email Eπικοινωνίας: dimtakos86@gmail.com</h5>
             <!-- Πληροφορίες Social -->
             <div class="social-info mt-50 wow fadeInUp" data-wow-delay="600ms">
-                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://x.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
             </div>
         </div>
     </section>
 
 
-    <!-- Footer -->
+    <!-- ##### Footer Area Start ##### -->
     <footer class="footer-area">
         <div class="container">
             <div class="row">
 
-                <!-- Footer -->
+                <!-- Footer Widget Area -->
                 <div class="col-12 col-lg-5">
-
+                    <div class="footer-widget-area mt-50">
+                        <p>Για οποιαδήποτε διευκρίνηση μπορείτε να μας στείλετε στο email μας που βρίσκεται στην δεξιά μεριά της οθόνης σας. </p>
+                    </div>
                 </div>
 
-                <!-- Footer -->
+                <!-- Footer Widget Area -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="footer-widget-area mt-50">
-                        <div class="footer-widget-area mt-50">
-                        <p>Μπορείτε να βρείτε την εταιρεία μας στον χάρτη:</p><br>
-                        <img src="{% static 'tourismingreece/img/footer-map.png' %}" alt="">
-                    </div>
-                        <h6 class="widget-title mb-5"></h6>
-
+                        <h6 class="widget-title mb-5">Θα μας βρείτε στον χάρτη:</h6>
+                        <img src="{% static 'kefalonia/images/footer-map.png' %}" alt="">
                     </div>
                 </div>
 
-                <!-- Footer -->
+                <!-- Footer Widget Area -->
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="footer-widget-area mt-50">
-
+                        <h6 class="widget-title mb-5">Κάντε εγγραφή στο email μας:</h6>
+                        <form action="#" method="post" class="subscribe-form">
+                            <input type="email" name="subscribe-email" id="subscribeemail" placeholder="Το E-mail σας">
+                            <button type="submit">Εγγραφή</button>
+                        </form>
                     </div>
                 </div>
 
@@ -283,15 +285,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <!-- All Javascript Scripts -->
     <!-- jQuery-2.2.4 js -->
-    <script src="{% static 'tourismingreece/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <script src="{% static 'kefalonia/js/jquery/jquery-2.2.4.min.js' %}"></script>
     <!-- Popper js -->
-    <script src="{% static 'tourismingreece/js/bootstrap/popper.min.js' %}"></script>
+    <script src="{% static 'kefalonia/js/bootstrap/popper.min.js' %}"></script>
     <!-- Bootstrap js -->
-    <script src="{% static 'tourismingreece/js/bootstrap/bootstrap.min.js' %}"></script>
+    <script src="{% static 'kefalonia/js/bootstrap/bootstrap.min.js' %}"></script>
     <!-- All Plugins js -->
-    <script src="{% static 'tourismingreece/js/plugins/plugins.js' %}"></script>
+    <script src="{% static 'kefalonia/js/plugins/plugins.js' %}"></script>
     <!-- Active js -->
-    <script src="{% static 'tourismingreece/js/active.js' %}"></script>
+    <script src="{% static 'kefalonia/js/active.js' %}"></script>
 </body>
 
 </html>
