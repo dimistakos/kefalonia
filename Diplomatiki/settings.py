@@ -27,6 +27,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.pythonanywhere.com']
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'dimtakos86@gmail.com'
+EMAIL_HOST_PASSWORD = 'ygvm xots nnes sesw'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'kefalonia.backends.email.backends.EmailBackend'
 
 # Application definition
 
