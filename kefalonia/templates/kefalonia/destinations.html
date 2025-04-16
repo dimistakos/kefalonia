@@ -3,17 +3,18 @@
 <html lang="en">
 
 <head>
+    <!-- Μετά - δεδομένα -->
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-   <!-- Τίτλος -->
+    <!-- Τίτλος -->
     <title>Ταξιδιωτικός οδηγός στην Κεφαλλονιά</title>
 
     <!-- Εικονίδιο -->
-    <link rel="icon" href="{% static 'kefalonia/img/logos.png' %}">
+    <link rel="icon" href="{% static 'kefalonia/images/logos.png' %}">
 
     <!-- Φόρτωση του bootstrap -->
     <link rel="stylesheet" href="{% static 'kefalonia/css/style.css' %}">
@@ -31,7 +32,7 @@
                     <nav class="classy-navbar justify-content-between" id="palatinNav">
 
                         <!-- Logo -->
-                        <a href="index.html" class="nav-brand"><img src="{% static 'kefalonia/img/logos.png' %}" alt=""></a>
+                        <a href="index.html" class="nav-brand"><img src="{% static 'kefalonia/images/logos.png' %}" alt=""></a>
 
                         <!-- Κώδικας για να είναι συμβατός για κινητά και ελαχιστοποίηση οθόνης -->
                         <div class="classy-navbar-toggler">
@@ -49,18 +50,19 @@
                             <!-- Σελίδες -->
                             <div class="classynav">
                                 <ul>
-                                    <li class="active"><a href="http://localhost:8000/">Αρχική</a></li>
-                                    <li><a href="about-us.html">Προορισμοί</a></li>
+                                    <li class="active"><a href='http://127.0.0.1:8000/'>Αρχική</a></li>
+                                    <li><a href="destinations.html">Προορισμοί</a></li>
                                     <li><a href="about-us.html">Κρατήσεις</a></li>
                                     <li><a href="services.html">Διαθεσιμότητα</a></li>
                                     <li><a href="services.html">Ημερολόγιο</a></li>
                                     <li><a href="services.html">Καιρός</a></li>
                                 </ul>
+
                                 <!-- Button -->
                                 <div class="menu-btn">
                                     <a href="#" class="btn palatin-btn">Εγγραφή</a>
                                 </div>
-                           </div>
+                            </div>
                             <!-- Τέλος Navbar -->
                         </div>
                     </nav>
@@ -68,85 +70,13 @@
             </div>
         </div>
     </header>
-    <!-- ##### Header Area End ##### -->
 
-    <!-- ##### Breadcumb Area Start ##### -->
-    <section class="breadcumb-area bg-img d-flex align-items-center justify-content-center" style="background-image: url({% static 'tourismingreece/img/bg-img/bg-3.jpg' %});">
-        <div class="bradcumbContent">
-            <h2>About us</h2>
-        </div>
+    <!-- Κεντρική φωτογραφία -->
+    <section class="breadcumb-area bg-img d-flex align-items-center justify-content-center" style="background-image: url({% static 'kefalonia/images/image_9.jpg' %});">
     </section>
-    <!-- ##### Breadcumb Area End ##### -->
 
-    <!-- ##### Book Now Area Start ##### -->
-    <div class="book-now-area">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-lg-10">
-                    <div class="book-now-form">
-                        <form action="#">
-                            <!-- Form Group -->
-                            <div class="form-group">
-                                <label for="select1">Check In</label>
-                                <select class="form-control" id="select1">
-                                  <option>19 June</option>
-                                  <option>20 June</option>
-                                  <option>21 June</option>
-                                  <option>22 June</option>
-                                  <option>23 June</option>
-                                  <option>24 June</option>
-                                  <option>25 June</option>
-                                </select>
-                            </div>
 
-                            <!-- Form Group -->
-                            <div class="form-group">
-                                <label for="select2">Check Out</label>
-                                <select class="form-control" id="select2">
-                                  <option>20 June</option>
-                                  <option>21 June</option>
-                                  <option>22 June</option>
-                                  <option>23 June</option>
-                                  <option>24 June</option>
-                                  <option>25 June</option>
-                                  <option>26 June</option>
-                                  <option>27 June</option>
-                                </select>
-                            </div>
 
-                            <!-- Form Group -->
-                            <div class="form-group">
-                                <label for="select3">Adults</label>
-                                <select class="form-control" id="select3">
-                                  <option>02</option>
-                                  <option>03</option>
-                                  <option>04</option>
-                                  <option>05</option>
-                                  <option>06</option>
-                                </select>
-                            </div>
-
-                            <!-- Form Group -->
-                            <div class="form-group">
-                                <label for="select4">Childrens</label>
-                                <select class="form-control" id="select4">
-                                  <option>01</option>
-                                  <option>02</option>
-                                  <option>03</option>
-                                  <option>04</option>
-                                  <option>05</option>
-                                </select>
-                            </div>
-
-                            <!-- Button -->
-                            <button type="submit">Book Now</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ##### Book Now Area End ##### -->
 
     <!-- ##### About Us Area Start ##### -->
     <section class="about-us-area">
@@ -174,7 +104,7 @@
     <!-- ##### About Us Area End ##### -->
 
     <!-- ##### Milestones Area Start ##### -->
-    <section class="our-milestones section-padding-100-0 bg-img bg-overlay bg-fixed" style="background-image: url({% static 'tourismingreece/img/bg-img/bg-4.jpg' %});">
+    <section class="our-milestones section-padding-100-0 bg-img bg-overlay bg-fixed" style="background-image: url({% static 'kefalonia/img/bg-img/bg-4.jpg' %});">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-8">

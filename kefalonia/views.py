@@ -16,3 +16,7 @@ def main(request):
         )
 
     return render(request, 'kefalonia/main_page.html',{})
+
+def destinations(request):
+
+    return render(request, 'kefalonia/destinations.html',{})
