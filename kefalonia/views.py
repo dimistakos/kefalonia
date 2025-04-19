@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
+from django.utils import timezone
+from .models import Place
 # Create your views here.
 
 def main(request):
@@ -18,5 +20,5 @@ def main(request):
     return render(request, 'kefalonia/main_page.html',{})
 
 def destinations(request):
-
-    return render(request, 'kefalonia/destinations.html',{})
+    places = Place.objects.filter(published_date__lte=timezone.now())
+    return render(request, 'kefalonia/destinations.html',{'places':places})

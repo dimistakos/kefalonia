@@ -12,6 +12,7 @@ class Place(models.Model):
     place_id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100)
     description = models.TextField()
+    image = models.ImageField(null=True)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 

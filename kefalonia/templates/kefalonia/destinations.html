@@ -1,75 +1,10 @@
+{% extends 'kefalonia/main_page.html' %}
 {% load static %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
+  <body>
 
-<head>
-    <!-- Μετά - δεδομένα -->
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
-    <!-- Τίτλος -->
-    <title>Ταξιδιωτικός οδηγός στην Κεφαλλονιά</title>
-
-    <!-- Εικονίδιο -->
-    <link rel="icon" href="{% static 'kefalonia/images/logos.png' %}">
-
-    <!-- Φόρτωση του bootstrap -->
-    <link rel="stylesheet" href="{% static 'kefalonia/css/style.css' %}">
-
-</head>
-
-<body>
-    <!-- Εισαγωγή Navbar -->
-    <header class="header-area">
-        <!-- Περιοχή Navbar -->
-        <div class="palatin-main-menu">
-            <div class="classy-nav-container breakpoint-off">
-                <div class="container">
-                    <!-- Μενού -->
-                    <nav class="classy-navbar justify-content-between" id="palatinNav">
-
-                        <!-- Logo -->
-                        <a href="index.html" class="nav-brand"><img src="{% static 'kefalonia/images/logos.png' %}" alt=""></a>
-
-                        <!-- Κώδικας για να είναι συμβατός για κινητά και ελαχιστοποίηση οθόνης -->
-                        <div class="classy-navbar-toggler">
-                            <span class="navbarToggler"><span></span><span></span><span></span></span>
-                        </div>
-
-                        <!-- Mενού -->
-                        <div class="classy-menu">
-
-                            <!-- Ενεργοποίηση κουμπιού για πλοήγηση προς τα πάνω -->
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                            </div>
-
-                            <!-- Σελίδες -->
-                            <div class="classynav">
-                                <ul>
-                                    <li class="active"><a href='http://127.0.0.1:8000/'>Αρχική</a></li>
-                                    <li><a href="destinations.html">Προορισμοί</a></li>
-                                    <li><a href="about-us.html">Κρατήσεις</a></li>
-                                    <li><a href="services.html">Διαθεσιμότητα</a></li>
-                                    <li><a href="services.html">Ημερολόγιο</a></li>
-                                    <li><a href="services.html">Καιρός</a></li>
-                                </ul>
-
-                                <!-- Button -->
-                                <div class="menu-btn">
-                                    <a href="#" class="btn palatin-btn">Εγγραφή</a>
-                                </div>
-                            </div>
-                            <!-- Τέλος Navbar -->
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
 
     <!-- Κεντρική φωτογραφία -->
     <section class="breadcumb-area bg-img d-flex align-items-center justify-content-center" style="background-image: url({% static 'kefalonia/images/image_9.jpg' %});">
@@ -78,30 +13,27 @@
 
 
 
-    <!-- ##### About Us Area Start ##### -->
-    <section class="about-us-area">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-lg-6">
-                    <div class="about-text mb-100">
-                        <div class="section-heading">
-                            <div class="line-"></div>
-                            <h2>A place to remember</h2>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
-                        <a href="#" class="btn palatin-btn mt-50">Read More</a>
-                    </div>
-                </div>
+    <!-- Τοποθεσίες -->
 
-                <div class="col-12 col-lg-6">
-                    <div class="about-thumbnail mb-100">
-                        <img src="{% static 'kefalonia/img/bg-img/2.jpg' %}" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ##### About Us Area End ##### -->
+<div class="container-fluid">
+  <h1>Αγαπητέ ταξιδιώτη!</h1>
+  <p style="font-size: 25px">Καλωσόρισες στην Κεφαλλονιά, το στολίδι του Ιονίου!.<br>
+  Ένα νησί γεμάτο αντιθέσεις, με μαγευτικές παραλίες, σμαραγδένια νερά, εντυπωσιακά σπήλαια, καταπράσινα βουνά και γραφικά χωριά.<br>
+  Ετοιμάσου για μια αξέχαστη εμπειρία!</p>
+   {% for place in places %}
+  <div class="row">
+
+    <div class="col-sm-6"></div>
+
+    <div class="col-sm-6 bg-white text-black">
+        <p> {{ place.description }} </p>
+        <p> Δημιουργία δημοσίευσης κειμένου: {{ place.created_date }}</p>
+        <p> Δημοσίευση: {{ place.published_date }}</p>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
 
     <!-- ##### Milestones Area Start ##### -->
     <section class="our-milestones section-padding-100-0 bg-img bg-overlay bg-fixed" style="background-image: url({% static 'kefalonia/img/bg-img/bg-4.jpg' %});">
@@ -167,62 +99,6 @@
     </section>
     <!-- ##### Milestones Area End ##### -->
 
-    <!-- ##### Hotels Area Start ##### -->
-    <section class="our-hotels-area section-padding-100-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading text-center">
-                        <div class="line-"></div>
-                        <h2>Our Hotel</h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <!-- Single Hotel Info -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-hotel-info mb-100">
-                        <div class="hotel-info-text">
-                            <h6><span class="fa fa-check"></span> Donec malesuada lorem maximus mauris</h6>
-                            <h6><span class="fa fa-check"></span> Integer tempus ligula sem, id feugiat</h6>
-                            <h6><span class="fa fa-check"></span> Malesuada lorem maximus mauris sceleri </h6>
-                        </div>
-                        <div class="hotel-img">
-                            <img src="{% static 'kefalonia/img/bg-img/3.jpg' %}" alt="">
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Hotel Info -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-hotel-info mb-100">
-                        <div class="hotel-info-text">
-                            <h6><span class="fa fa-check"></span> Tempus ligula sem, id feugiat quam</h6>
-                            <h6><span class="fa fa-check"></span> Integer tempus ligula sem, id feugiat</h6>
-                            <h6><span class="fa fa-check"></span> Esuada lorem maximus mauris sceleri</h6>
-                        </div>
-                        <div class="hotel-img">
-                            <img src="{% static 'kefalonia/img/bg-img/10.jpg' %}" alt="">
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Hotel Info -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-hotel-info mb-100">
-                        <div class="hotel-info-text">
-                            <h6><span class="fa fa-check"></span> Tempus ligula sem, id feugiat quam</h6>
-                            <h6><span class="fa fa-check"></span> Integer tempus ligula sem, id feugiat</h6>
-                            <h6><span class="fa fa-check"></span> Esuada lorem maximus mauris sceleri</h6>
-                        </div>
-                        <div class="hotel-img">
-                            <img src="{% static 'kefalonia/img/bg-img/11.jpg' %}" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ##### Hotels Area End ##### -->
 
     <!-- ##### Testimonial Area Start ##### -->
     <section class="testimonial-area section-padding-100 bg-img" style="background-image: url({% static 'tourismingreece/img/core-img/pattern.png' %});">
@@ -260,65 +136,8 @@
     </section>
     <!-- ##### Testimonial Area End ##### -->
 
-    <!-- ##### Footer Area Start ##### -->
-    <footer class="footer-area">
-        <div class="container">
-            <div class="row">
 
-                <!-- Footer Widget Area -->
-                <div class="col-12 col-lg-5">
-                    <div class="footer-widget-area mt-50">
-                        <p>Για οποιαδήποτε διευκρίνηση μπορείτε να μας στείλετε στο email μας που βρίσκεται στην δεξιά μεριά της οθόνης σας. </p>
-                    </div>
-                </div>
-
-                <!-- Footer Widget Area -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="footer-widget-area mt-50">
-                        <h6 class="widget-title mb-5">Θα μας βρείτε στον χάρτη:</h6>
-                        <img src="{% static 'kefalonia/images/footer-map.png' %}" alt="">
-                    </div>
-                </div>
-
-                <!-- Footer Widget Area -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="footer-widget-area mt-50">
-                        <h6 class="widget-title mb-5">Κάντε εγγραφή στο email μας:</h6>
-                        <form method="POST">
-                            {% csrf_token %}
-                            <div class="subscribe-form">
-                            <input type="name" name="name" id="name" placeholder="Το Όνομα σας">
-                            <input type="email" name="subscribe-email" id="subscribeemail" placeholder="Το E-mail σας">
-                            <button type="submit">Εγγραφή</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Copywrite -->
-                <div class="col-12">
-                    <div class="copywrite-text mt-30">
-                        <p><a href="#">
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <p>Dimitrios Takos</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- ##### Footer Area End ##### -->
-
-    <!-- ##### All Javascript Script ##### -->
-    <!-- jQuery-2.2.4 js -->
-    <script src="{% static 'kefalonia/js/jquery/jquery-2.2.4.min.js' %}"></script>
-    <!-- Popper js -->
-    <script src="{% static 'kefalonia/js/bootstrap/popper.min.js' %}"></script>
-    <!-- Bootstrap js -->
-    <script src="{% static 'kefalonia/js/bootstrap/bootstrap.min.js' %}"></script>
-    <!-- All Plugins js -->
-    <script src="{% static 'kefalonia/js/plugins/plugins.js' %}"></script>
-    <!-- Active js -->
-    <script src="{% static 'kefalonia/js/active.js' %}"></script>
-</body>
+  </body>
 
 </html>
+{% endblock %}
