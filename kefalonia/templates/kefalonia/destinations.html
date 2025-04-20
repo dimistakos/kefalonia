@@ -1,9 +1,9 @@
 {% extends 'kefalonia/main_page.html' %}
 {% load static %}
 {% block content %}
-<!DOCTYPE html>
 <html lang="en">
-  <body>
+
+<body>
 
 
     <!-- Κεντρική φωτογραφία -->
@@ -20,15 +20,16 @@
   <p style="font-size: 25px">Καλωσόρισες στην Κεφαλλονιά, το στολίδι του Ιονίου!.<br>
   Ένα νησί γεμάτο αντιθέσεις, με μαγευτικές παραλίες, σμαραγδένια νερά, εντυπωσιακά σπήλαια, καταπράσινα βουνά και γραφικά χωριά.<br>
   Ετοιμάσου για μια αξέχαστη εμπειρία!</p>
-   {% for place in places %}
+{% for place in places %}
   <div class="row">
-
-    <div class="col-sm-6"></div>
-
-    <div class="col-sm-6 bg-white text-black">
-        <p> {{ place.description }} </p>
+    <div class="col-sm-6">
+      <h2 style="padding-left: 75px;">{{ place.title }}</h2>
+        <p style="padding-left: 75px;"><img src="{{ place.image.url }}" style="height:200px; width:350px;" ></p>
+        <p style="padding-left: 75px;"> Δημοσίευση: {{ place.published_date }}</p>
+    </div>
+    <div class="col-sm-6 bg-white">
+        <p style="font-family: Roboto, sans-serif; padding-right: 20px;"> {{ place.description }} </p>
         <p> Δημιουργία δημοσίευσης κειμένου: {{ place.created_date }}</p>
-        <p> Δημοσίευση: {{ place.published_date }}</p>
     </div>
   </div>
 </div>
