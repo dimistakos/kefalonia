@@ -46,11 +46,17 @@ INSTALLED_APPS = [
     'kefalonia',
     'embed_video',
 
-    # Custom App
+    # Custom Apps
     'hotel',
     'userauths',
     'addon',
     'user_dashboard',
+
+    # Third Part Apps
+    'import_export',
+    'crispy_forms',
+    'mathfilters',
+    'taggit',
 ]
 
 MIDDLEWARE = [
