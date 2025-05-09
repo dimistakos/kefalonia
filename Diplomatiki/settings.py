@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'kefalonia',
     'embed_video',
-    'hotel.apps.HotelConfig'
+    'hotel.apps.HotelConfig',
+    'userauths.apps.UserauthsConfig'
 ]
 
 MIDDLEWARE = [
