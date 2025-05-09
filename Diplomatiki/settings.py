@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'kefalonia',
     'embed_video',
     'hotel.apps.HotelConfig',
-    'userauths.apps.UserauthsConfig'
+    'userauths.apps.UserauthsConfig',
+    'addon.apps.AddonConfig'
 ]
 
 MIDDLEWARE = [
