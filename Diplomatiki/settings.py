@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'embed_video',
     'hotel.apps.HotelConfig',
     'userauths.apps.UserauthsConfig',
-    'addon.apps.AddonConfig'
+    'addon.apps.AddonConfig',
+    'user_dashboard.apps.UserDashboardConfig'
 ]
 
 MIDDLEWARE = [
