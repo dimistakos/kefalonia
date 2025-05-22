@@ -37,16 +37,18 @@ EMAIL_USE_TLS = True
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'kefalonia',
-    'embed_video',
+
+
 
     # Custom Apps
+    'kefalonia',
     'hotel',
     'userauths',
     'addon',
@@ -57,6 +59,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'mathfilters',
     'taggit',
+    'embed_video',
 ]
 
 MIDDLEWARE = [
@@ -145,3 +148,76 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Custom Admin Settings
+JAZZMIN_SETTINGS = {
+    "site_title": "Dimitris Takos",
+    "site_header": "Dimitris Takos",
+    "site_brand": "Dimitris Takos ",
+    "site_icon": "kefalonia/images/logos.png",
+    "site_logo": "kefalonia/images/logos.png",
+    "welcome_sign": "Welcome To Site by Dimitris Takos",
+    "copyright": "Dimitris Takos 2025",
+    "user_avatar": "kefalonia/images/logos.png",
+    "topmenu_links": [
+        {"name": "Dashboard", "url": "home", "permissions": ["auth.view_user"]},
+        {"model": "auth.User"},
+    ],
+    "show_sidebar": True,
+    "navigation_expanded": True,
+    "order_with_respect_to": [
+        "add_model_name_here"
+    ],
+    "icons": {
+        "admin.LogEntry": "fas fa-file",
+        "auth": "fas fa-users-cog",
+        "auth.user": "fas fa-user",
+        "userauths.User": "fas fa-user",
+        "userauths.Profile": "fas fa-address-card",
+    },
+    "default_icon_parents": "fas fa-chevron-circle-right",
+    "default_icon_children": "fas fa-arrow-circle-right",
+    "related_modal_active": False,
+
+    "custom_js": None,
+    "show_ui_builder": True,
+
+    "changeform_format": "horizontal_tabs",
+    "changeform_format_overrides": {
+        "auth.user": "collapsible",
+        "auth.group": "vertical_tabs",
+    },
+}
+
+# Jazzmin UI Tweaks
+JAZZMIN_UI_TWEAKS = {
+    "navbar_small_text": False,
+    "footer_small_text": False,
+    "body_small_text": True,
+    "brand_small_text": False,
+    "brand_colour": "navbar-indigo",
+    "accent": "accent-olive",
+    "navbar": "navbar-indigo navbar-dark",
+    "no_navbar_border": False,
+    "navbar_fixed": False,
+    "layout_boxed": False,
+    "footer_fixed": False,
+    "sidebar_fixed": False,
+    "sidebar": "sidebar-dark-indigo",
+    "sidebar_nav_small_text": False,
+    "sidebar_disable_expand": False,
+    "sidebar_nav_child_indent": False,
+    "sidebar_nav_compact_style": False,
+    "sidebar_nav_legacy_style": False,
+    "sidebar_nav_flat_style": False,
+    "theme": "default",
+    "dark_mode_theme": None,
+    "button_classes": {
+        "primary": "btn-outline-primary",
+        "secondary": "btn-outline-secondary",
+        "info": "btn-info",
+        "warning": "btn-warning",
+        "danger": "btn-danger",
+        "success": "btn-success"
+    }
+}
