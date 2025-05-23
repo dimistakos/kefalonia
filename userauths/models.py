@@ -36,7 +36,7 @@ class User(AbstractUser):
     REQUIRED_FIELDS = ['username']
 
     def __str__(self):
-        return self.full_name
+        return self.username
 
 
 class Profile(models.Model):
