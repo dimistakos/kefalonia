@@ -10,4 +10,4 @@ def RegisterView(request):
     context = {
         'form': form,
     }
-    return render(request, "userauths/sign-up.html")
+    return render(request, "userauths/sign-up.html", context)
